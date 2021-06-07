@@ -9,7 +9,7 @@
 
 ## 1.在budid.gradle(Module:app)文件里添加依赖：
 
-      implementation 'com.github.yoda-fox:BodyFatSDK:1.0.3'
+       implementation 'com.github.yoda-fox:BodyFatSDK:1.0.4'
 
 ## 2.在budid.gradle(Project:projectName)里添加
 
