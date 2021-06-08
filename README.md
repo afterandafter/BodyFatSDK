@@ -2,7 +2,7 @@
 
 [中文文档](https://github.com/yoda-fox/BodyFatSDK/blob/master/Document.md)  
 
-## 使用条件
+## Conditions of Use
     1.The minimum version is android5.0 (API 21)
     2.Dependent environment androidx
 
@@ -170,5 +170,6 @@
  Health level|bodyFatConfig.healthLevel|int|1: Lean; 2: Standard; 3:Overweight; 4: Obese
  Body score|bodyFatConfig.bodyScore|int|
  Body type|bodyFatConfig.bodyType|int|1: Lean type; 2: Lean muscle type; 3: Standard type;<br>4: Standard muscle type; 5: lack of exercise type;  <br>6: overweight type;7: Obese muscular type; <br>8: Puffyand obese type; 9: Obese type;10: Obese muscle type
- Impedance type|bodyFatConfig.impedanceStatus|int| **八极秤:** <br>1: Both hands and feet are in contact with the electrodes;<br>2: Only the feetare in contact with the electrodes of the scale; 3: Only the hand touches the electrode of the handle;<br> -1: No hand or foot touches the electrode<br> **普通脂肪秤:** <br>1：脚接触秤电极; -1：脚没有接触秤电极
+ Impedance type|bodyFatConfig.impedanceStatus|int| **8 electrodes body up & down scale:** <br>1: Both hands and feet are in contact with the electrodes;<br>2: Only the feet are in contact with the electrodes of the scale; 3: Only the hand touches the electrode of the handle;<br> -1: No hand or foot touches the electrode<br> **Normal body fat scale:** <br>1: The foot is in contact with the electrode of the scale; 
+-1: The foot is not in contact with the electrode of the scale
  Device mac address|bodyFatConfig.mac|String|The Mac address of the body fat scale 
