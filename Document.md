@@ -172,3 +172,74 @@
  身体类型|bodyFatConfig.bodyType|int|1：偏瘦型; 2：偏瘦肌肉型; 3：标准型;<br>4：标准肌肉型; 5：缺乏运动型; 6：偏胖型;<br>7：偏胖肌肉型; 8：浮肿肥胖型; 9：肥胖型;<br>10：肥胖肌肉型
  阻抗类型|bodyFatConfig.impedanceStatus|int| **八极秤:** 1：手脚都接触电极; 2：只是脚接触秤电极;<br> 3：只是手接触手柄电极; -1：手脚都没接触电极<br> **普通脂肪秤:** 1：脚接触秤电极; -1：脚没有接触秤电极
  设备MAC地址|bodyFatConfig.mac|String|返回测量数据的体脂秤设备Mac地址
+ 
+ 
+## 参数范围说明
+### 1.体重
+#### 标准体重：standardWeight
+#### 男标准身高范围：
+    float downWeight = standardWeight  - standardWeight  * 0.1f;
+#### 女标准身高范围：
+    float upWeight = standardWeight  + standardWeight  * 0.1f; 
+#### 偏胖范围：
+    float fatWeight = standardWeight  + standardWeight  * 0.2f;
+#### 人的体重范围：
+ 分类     |标准范围
+ -------- | :-----------:
+偏瘦|weight<downWeight
+标准|downWeight≤weight<upWeight 
+偏胖|upWeight ≤weight<fatWeight 
+肥胖|weight≥fatWeight 
+			      			      
+### 2.BMI
+ 分类     |标准范围
+ -------- | :-----------:
+偏瘦|BMI<18.5
+标准|18.5≤BMI<24
+偏胖|24≤BMI<30
+肥胖|30≤BMI
+
+### 3.脂肪率
+#### 男性：
+如果年龄：小于 40
+low = 10f;<br>
+stander = 21f;<br>
+lightFat = 26f;<br>
+如果年龄： 大于等于40， 小于60 的<br>
+low = 11f;<br>
+stander = 22f;<br>
+lightFat = 27f;<br>
+如果年龄： 大于等于60 的<br>
+low = 13f;<br>
+stander = 24f;<br>
+lightFat = 29f;<br>
+#### 女性：
+如果年龄：小于 40<br>
+low = 20f;<br>
+stander = 34f;<br>
+lightFat = 39f;<br>
+如果年龄： 大于等于40， 小于60 的<br>
+low = 21f;<br>
+stander = 35f;<br>
+lightFat = 40f;<br>
+如果年龄： 大于等于60 的<br>
+low = 22f;<br>
+stander = 36f;<br>
+lightFat = 41f; <br>
+
+ 分类     |标准范围
+ -------- | :-----------:
+偏瘦|fat≤low
+标准|low<fat≤stander
+偏胖|stander<fat≤lightFat
+肥胖|lightFat<fat
+
+### 4.皮下脂肪率
+ 分类     |男性标准范围||女性标准范围
+ -------- | :-----------: | :-----------:
+偏瘦|<8.6%|<18.5%
+标准|8.6%-16.7%|18.5%-26.7%
+偏胖|16.7%-20.7|26.7-30.8%
+肥胖|>20.7%|>30.8%	
+		
+ 
