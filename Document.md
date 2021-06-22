@@ -281,10 +281,53 @@ mid = 60f;
 不足|water≤low
 标准|low<water≤mid
 优|mid<water
+	    
 ### 7.内脏脂肪等级
  分类     |标准范围
  -------- | :-----------:
 标准|visceral≤9
 警惕|9<visceral≤14
 危险|14<visceral
+	       
+### 8.骨量
+#### 男性：
+如果体重：小于 60kg<br>
+low = 2.4f;<br>
+mid = 2.6f;<br>
+如果体重： 大于等于60， 小于等于75 的<br>
+low = 2.8f;<br>
+mid = 3.0f;<br>
+如果体重： 大于 75 的<br>
+low = 3.1f;<br>
+mid = 3.3f;
+#### 女性：
+如果体重：小于 45kg<br>
+low = 1.7f;<br>
+mid = 1.9f;<br>
+如果体重： 大于等于45， 小于等于60 的<br>
+low = 2.1f;<br>
+mid = 2.3f;<br>
+如果体重： 大于 60 的<br>
+low = 2.4f;<br>
+mid = 2.6f;
+ 分类     |标准范围
+ -------- | :-----------:
+不足|bone≤low
+标准|low<bone≤mid
+优|mid<bone    
 
+### 9.基础代谢	   
+如果年龄：小于等于29 的<br>
+男性：low = weight * 24.0f;<br>
+女性：low = weight * 23.6f;<br>
+如果年龄：大于等于30， 小于等于49 的<br>
+男性：low = weight * 22.3f;<br>
+女性：low = weight * 21.7f;<br>
+如果年龄：大于 49 的<br>
+男性：low = weight * 21.5f;<br>
+女性：low = weight * 20.7f;<br>
+ 分类     |标准范围
+ -------- | :-----------:
+偏低|bmr≤low
+优|low<bmr
+ 
