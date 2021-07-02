@@ -1,6 +1,6 @@
 # 与体脂秤交互获取人体各项数据
 # SDK使用说明文档
-[英文文档](https://github.com/yoda-fox/BodyFatSDK#readme)   
+[English document](https://github.com/yoda-fox/BodyFatSDK#readme)   
 
 ## 使用条件
     1.最低版本 android5.0（API 21）
